@@ -12,7 +12,12 @@ end or function() end
 local function import(file)
     out("Importing File \"%s\"", file)
     -- return task.spawn(function()
+    local x, a = pcall(function()
         return loadstring(game:HttpGet(url .. file))()
+    end)
+    if not x then
+        return warn('failed to import', file)
+    end
     -- end)
 end
 
