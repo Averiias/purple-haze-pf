@@ -1,5 +1,5 @@
 local script_details = {
-    debug = true,
+    debug = false,
     version = "1.0.0",
 }
 
